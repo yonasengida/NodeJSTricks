@@ -15,3 +15,13 @@ async.each(ListA, function(itemA,callback){
   console.log('Process Finished');
 });
 
+
+
+var a = [{x:1,y:2}, {x:3,y:4}, {x:5,y:6}, {x:1,y:2}];
+
+var b = _.uniq(a, function(v) { 
+    return v.x && v.y;
+})
+
+console.log(b);  // [ { x: 1, y: 2 }, { x: 3, y: 4 }, { x: 5, y: 6 } ]
+
